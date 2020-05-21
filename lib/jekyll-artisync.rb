@@ -27,10 +27,6 @@ class ArticleSyncEmbed < Liquid::Tag
     res.body
   end
 
-  def _get_xpath(xpath_type)
-
-  end
-
   def _fetch_article(article_xpath)
     article_html = _fetch_html()
 
