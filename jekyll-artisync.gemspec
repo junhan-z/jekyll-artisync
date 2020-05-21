@@ -9,6 +9,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/junhan-z/jekyll-artisync"
   spec.license       = "MIT"
 
-  spec.files         = ["lib/artisync.rb"]
+  spec.files         = ["lib/jekyll-artisync.rb"]
 
 end
