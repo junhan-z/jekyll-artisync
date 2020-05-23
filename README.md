@@ -19,6 +19,19 @@ It will be nice to sync from a post that I write online with a WYSIWYG editor, w
 
 Therefore using a customized Liquid tag seems is the best solution.
 
+## Installation
+Add this line to your Gemfile:
+```ruby
+group :jekyll_plugins do
+  ...
+  gem "jekyll-artisync"
+end
+```
+And then execute:
+```
+$ bundle install
+```
+
 ## How to use it
 * Create a normal post under `_post` directory, for example `2020-05-20-foo-bar-post.md` with your favorite template in front matter
 * As for content `{% artisync https://zhuanlan.zhihu.com/p/<post id> zhihu %}` will be sufficient
