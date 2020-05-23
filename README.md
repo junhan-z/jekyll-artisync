@@ -1,5 +1,7 @@
-# [jekyll-artisync](https://rubygems.org/gems/jekyll-artisync)
-![Gem Version](https://img.shields.io/gem/v/jekyll-artisync.svg)
+# jekyll-artisync
+[![Gem Version](https://img.shields.io/gem/v/jekyll-artisync.svg)][ruby-gems]
+
+[ruby-gems]: https://rubygems.org/gems/jekyll-artisync
 
 Jekyll Plugin to sync articles from other sites.
 ## Introduction
