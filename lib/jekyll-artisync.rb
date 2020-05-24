@@ -7,7 +7,7 @@ require "jekyll"
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36'
 
 SITE_TO_ARTICLE_XPATH = {
-  'zhihu' => '//div[contains(@class, "Post-RichText") and contains(@class, "ztext")]',
+  'zhuanlan.zhihu.com' => '//div[contains(@class, "Post-RichText") and contains(@class, "ztext")]',
 }
 
 class ArticleSyncEmbed < Liquid::Tag
@@ -17,8 +17,7 @@ class ArticleSyncEmbed < Liquid::Tag
     @content = content
   end
 
-  def _fetch_html(url)
-    uri = URI(url)
+  def _fetch_html(uri)
     res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do |http|
       # :use_ssl => true for the uri is https
       http.request(Net::HTTP::Get.new(uri, {'User-Agent' => USER_AGENT}))
@@ -43,8 +42,11 @@ class ArticleSyncEmbed < Liquid::Tag
 
   def render(context)
     url, site = @content.strip.split
-    page_html = self._fetch_html(url)
-    article = Nokogiri::HTML(page_html).xpath(SITE_TO_ARTICLE_XPATH[site])
+    uri = URI(url)
+    page_host = uri.hostname
+    puts page_host
+    page_html = self._fetch_html(uri)
+    article = Nokogiri::HTML(page_html).xpath(SITE_TO_ARTICLE_XPATH[page_host])
     content = []
     article.children.each do |node|
       content.append self._handle_node(node)
