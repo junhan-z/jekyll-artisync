@@ -27,18 +27,18 @@ class ArticleSyncEmbed < Liquid::Tag
     res.body
   end
 
-  def _fetch_article(article_xpath)
-    article_html = _fetch_html()
+  def _handle_node(node)
+    case node.name
+    when 'figure'
+      img_node = node.children[1]
 
-    xpath = @content.xpath
-    article_doc = Nokogiri::HTML(article_html)
+      img_url = img_node['data-actualsrc']
+      img_url['_b.jpg'] = '_720w.jpg'
+      img_url['/v2'] = "/80/v2"
 
-    article_node = article_doc.xpath(article_xpath)
-    content = []
-    article_node.children.each do |node|
-      content.append node.to_html
+      img_node['src'] = img_url
     end
-
+    node.to_html
   end
 
   def render(context)
@@ -47,7 +47,7 @@ class ArticleSyncEmbed < Liquid::Tag
     article = Nokogiri::HTML(page_html).xpath(SITE_TO_ARTICLE_XPATH[site])
     content = []
     article.children.each do |node|
-      content.append node.to_html
+      content.append self._handle_node(node)
     end
 
     content.join("\n")
