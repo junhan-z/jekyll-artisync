@@ -37,14 +37,13 @@ $ bundle install
 
 ## How to use it
 * Create a normal post under `_post` directory, for example `2020-05-20-foo-bar-post.md` with your favorite template in front matter
-* As for content `{% artisync https://zhuanlan.zhihu.com/p/<post id> zhihu %}` will be sufficient
+* As for content `{% artisync https://zhuanlan.zhihu.com/p/<post id> %}` will be sufficient
 * Run `jekyll s` and go to `localhost:4000`, you should be able to see the article fetched and displayed
 
 ## Syntax and Support List
-`{% artisync url site-identifier %}`
+`{% artisync url %}`
 
 `url`: the URL of your post  
-`site-identifier`: the identifier for your site, in above example, `zhihu` is used to get the xpath of the content body
 
 Here is a list of current supported sites:
 | URL                                     | site identifier  | 
