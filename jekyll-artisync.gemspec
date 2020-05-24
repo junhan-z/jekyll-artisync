@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-artisync"
-  spec.version       = 0.3
+  spec.version       = 0.4
   spec.authors       = ["Junhan"]
   spec.email         = ["junhanoct@gmail.com"]
 

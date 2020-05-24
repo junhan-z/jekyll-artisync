@@ -44,7 +44,6 @@ class ArticleSyncEmbed < Liquid::Tag
     url = @content.strip
     uri = URI(url)
     page_host = uri.hostname
-    puts page_host
     page_html = self._fetch_html(uri)
     article = Nokogiri::HTML(page_html).xpath(HOST_TO_ARTICLE_XPATH[page_host])
     content = []
