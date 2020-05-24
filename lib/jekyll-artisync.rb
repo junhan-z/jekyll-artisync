@@ -6,7 +6,7 @@ require "jekyll"
 # user agent is necessary otherwise certain sites such as Zhihu throws 400
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36'
 
-SITE_TO_ARTICLE_XPATH = {
+HOST_TO_ARTICLE_XPATH = {
   'zhuanlan.zhihu.com' => '//div[contains(@class, "Post-RichText") and contains(@class, "ztext")]',
 }
 
@@ -41,12 +41,12 @@ class ArticleSyncEmbed < Liquid::Tag
   end
 
   def render(context)
-    url, site = @content.strip.split
+    url = @content.strip
     uri = URI(url)
     page_host = uri.hostname
     puts page_host
     page_html = self._fetch_html(uri)
-    article = Nokogiri::HTML(page_html).xpath(SITE_TO_ARTICLE_XPATH[page_host])
+    article = Nokogiri::HTML(page_html).xpath(HOST_TO_ARTICLE_XPATH[page_host])
     content = []
     article.children.each do |node|
       content.append self._handle_node(node)
