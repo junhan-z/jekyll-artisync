@@ -26,7 +26,7 @@ Add this line to your Gemfile:
 ```ruby
 group :jekyll_plugins do
   ...
-  gem "nokogiri" # dependency of jekyll-artisync
+  gem "nokogiri" # needed by jekyll-artisync
   gem "jekyll-artisync"
 end
 ```
@@ -36,7 +36,7 @@ $ bundle install
 ```
 
 ## How to use it
-* Create a normal post under `_post` directory, for example `2020-05-20-foo-bar-post.md` with your favorite template in front matter
+* Create a normal post under `_posts` directory, for example `2020-05-20-foo-bar-post.md` with your favorite template in front matter
 * As for content `{% artisync https://zhuanlan.zhihu.com/p/<post id> %}` will be sufficient
 * Run `jekyll s` and go to `localhost:4000`, you should be able to see the article fetched and displayed
 
@@ -46,8 +46,8 @@ $ bundle install
 `url`: the URL of your post  
 
 Here is a list of current supported sites:
-| URL                                     | site identifier  | 
-|:-:                                      |:-:               |
+| URL                                       | site identifier  | 
+|:-:                                        |:-:               |
 | `https://zhuanlan.zhihu.com/p/post-id`    |  zhihu           |
 
 ## Next Steps
