@@ -1,3 +1,6 @@
+require 'rake'
+
+
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-artisync"
   spec.version       = 0.4
@@ -9,6 +12,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/junhan-z/jekyll-artisync"
   spec.license       = "MIT"
 
-  spec.files         = ["lib/jekyll-artisync.rb"]
+  spec.files         = FileList["lib/jekyll-artisync.rb", "lib/syncers/*"].to_a
 
 end
