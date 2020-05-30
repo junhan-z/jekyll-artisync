@@ -10,7 +10,7 @@ class ArticleSyncEmbed < Liquid::Tag
   end
 
   def render(context)
-    url = @content.strip
+    url = Liquid::Template.parse(@content).render(context).strip
     uri = URI(url)
     syncer = SyncerFactory.get_syncer(uri)
     return syncer.gen_html

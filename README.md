@@ -43,6 +43,18 @@ $ bundle install
 ## Syntax and Support List
 `{% artisync url %}`
 
+Or add a url in your front matter and referenced in Liquid, such as:
+```
+---
+...
+post_url: <your post url>
+
+---
+```
+
+`{% artisync {{page.post_url}} %}`
+
+
 `url`: the URL of your post  
 
 Here is a list of current supported sites:
