@@ -41,9 +41,9 @@ $ bundle install
 * Run `jekyll s` and go to `localhost:4000`, you should be able to see the article fetched and displayed
 
 ## Syntax and Support List
-`{% artisync url %}`
+`{% artisync <your post url> %}`
 
-Or add a url in your front matter and referenced in Liquid, such as:
+Or add the url in your front matter and reference it in Liquid, such as:
 ```
 ---
 ...
@@ -53,9 +53,7 @@ post_url: <your post url>
 ```
 
 `{% artisync {{page.post_url}} %}`
-
-
-`url`: the URL of your post  
+ 
 
 Here is a list of current supported sites:
 | URL                                       | site identifier  | 
