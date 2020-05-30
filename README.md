@@ -56,9 +56,9 @@ post_url: <your post url>
  
 
 Here is a list of current supported sites:
-| URL                                       | site identifier  | 
-|:-:                                        |:-:               |
-| `https://zhuanlan.zhihu.com/p/post-id`    |  zhihu           |
+| URL Pattern                               |
+|:-:                                        |
+| `https://zhuanlan.zhihu.com/p/post-id`    |
 
 ## Next Steps
 Please refer to issues of this repo.
