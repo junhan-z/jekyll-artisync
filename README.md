@@ -28,7 +28,6 @@ Add this line to your Gemfile:
 ```ruby
 group :jekyll_plugins do
   ...
-  gem "nokogiri" # needed by jekyll-artisync
   gem "jekyll-artisync"
 end
 ```

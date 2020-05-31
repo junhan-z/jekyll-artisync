@@ -14,4 +14,6 @@ Gem::Specification.new do |spec|
 
   spec.files         = FileList["lib/jekyll-artisync.rb", "lib/syncers/*"].to_a
 
+  spec.add_dependency "nokogiri", "~> 1.10"
+
 end
