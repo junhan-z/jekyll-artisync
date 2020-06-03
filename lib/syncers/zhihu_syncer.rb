@@ -11,12 +11,8 @@ class ZhihuSyncer < PerNodeSyncer
     case node.name
     when 'figure'
       img_node = node.children[1]
+      img_node['src'] = img_node['data-actualsrc']
 
-      img_url = img_node['data-actualsrc']
-      img_url['_b.jpg'] = '_720w.jpg'
-      img_url['/v2'] = "/80/v2"
-
-      img_node['src'] = img_url
     end
     node.to_html
   end
