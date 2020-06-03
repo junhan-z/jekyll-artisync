@@ -21,7 +21,8 @@ class ZhihuSyncer < PerNodeSyncer
       end
       node = img_node
     end
-    node.to_html
+
+    if node then node.to_html else '' end
   end
 
 end
