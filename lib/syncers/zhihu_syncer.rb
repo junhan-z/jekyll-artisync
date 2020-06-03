@@ -10,9 +10,16 @@ class ZhihuSyncer < PerNodeSyncer
   def _handle_node(node)
     case node.name
     when 'figure'
-      img_node = node.children[1]
-      img_node['src'] = img_node['data-actualsrc']
-
+      img_node = nil
+      nodes = node.children
+      while nodes.length > 0
+        n = nodes.pop
+        if not img_node and n.name == 'img'
+          img_node = n
+          img_node['src'] = img_node['data-actualsrc']
+        end
+      end
+      node = img_node
     end
     node.to_html
   end
