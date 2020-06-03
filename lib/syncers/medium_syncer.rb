@@ -21,8 +21,9 @@ class MediumSyncer < PerNodeSyncer
     when "figure"
       img_nodes = node.css('img')
       node = img_nodes[-1] if img_nodes
-      node['width'] = nil
-      node['height'] = nil
+      # to make sure image scales right
+      node.remove_attribute('width')
+      node.remove_attribute('height')
     end
     node.to_html
   end
