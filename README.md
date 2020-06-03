@@ -6,6 +6,8 @@
 [ruby-gems]: https://rubygems.org/gems/jekyll-artisync
 
 Jekyll Plugin to sync articles from other sites.
+A [simple demo site](https://jekyll-artisync-demosite.herokuapp.com/) showing how it works.
+
 ## Introduction
 **jekyll-artisync** is a customized [Liquid](https://shopify.github.io/liquid/) template tag to fetch an article from a given URL and feed as the content of your Jekyll site post.
 
