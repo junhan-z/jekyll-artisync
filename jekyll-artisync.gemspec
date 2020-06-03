@@ -1,10 +1,8 @@
-require 'rake'
-
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-artisync"
   spec.version       = 0.7
-  spec.authors       = ["Junhan"]
+  spec.authors       = ["Junhan Zhu"]
   spec.email         = ["junhanoct@gmail.com"]
 
   spec.summary       = %q{Jekyll Plugin to sync articles from other sites.}
@@ -12,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/junhan-z/jekyll-artisync"
   spec.license       = "MIT"
 
-  spec.files         = FileList["lib/jekyll-artisync.rb", "lib/syncers/*"].to_a
+  spec.files         = Dir["lib/jekyll-artisync.rb"] + Dir["lib/syncers/*"]
 
   spec.add_dependency "nokogiri", "~> 1.10"
 
