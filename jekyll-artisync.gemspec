@@ -3,7 +3,7 @@ require 'rake'
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-artisync"
-  spec.version       = 0.6
+  spec.version       = 0.7
   spec.authors       = ["Junhan"]
   spec.email         = ["junhanoct@gmail.com"]
 

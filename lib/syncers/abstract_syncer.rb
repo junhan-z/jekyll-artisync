@@ -25,6 +25,10 @@ class AbstractSyncer
     raise MESSAGE % [__method__]
   end
 
+  def get_article_nodes
+    raise MESSAGE % [__method__]
+  end
+
   def gen_html
     raise MESSAGE % [__method__]
   end
