@@ -40,8 +40,10 @@ $ bundle install
 
 ## How to use it
 * Create a normal post under `_posts` directory, for example `2020-05-20-foo-bar-post.md` with your favorite template in front matter
-* As for content `{% artisync https://zhuanlan.zhihu.com/p/<post id> %}` will be sufficient
-* Run `jekyll s` and go to `localhost:4000`, you should be able to see the article fetched and displayed
+* As for content, apply the tag with supported url. For example, `{% artisync https://zhuanlan.zhihu.com/p/<post id> %}` will be sufficient
+* Run `jekyll s` in terminal and wait for Jekyll to build the site and run the server
+* Go to `localhost:<port>` (default port is 4000), you should be able to see the article fetched and displayed
+* Deploy your change to your website host
 
 ## Syntax and Support List
 `{% artisync <your post url> %}`
