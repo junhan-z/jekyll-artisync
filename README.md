@@ -1,7 +1,7 @@
 # jekyll-artisync
 
 [![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE.txt)
-[![Gem Version](https://badge.fury.io/rb/jekyll-artisync.svg)](https://badge.fury.io/rb/jekyll-artisync)
+[![Gem Version](https://img.shields.io/gem/v/jekyll-artisync.svg)][ruby-gems]
 
 [ruby-gems]: https://rubygems.org/gems/jekyll-artisync
 
