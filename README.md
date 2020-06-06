@@ -58,12 +58,13 @@ post_url: <your post url>
 `{% artisync {{page.post_url}} %}`
  
 
-Here is a list of current supported sites:
-| URL Pattern                                  |
-|:-:                                           |
-| `https://zhuanlan.zhihu.com/p/<post-id>`     |
-| `https://mp.weixin.qq.com/s/<post-id>`       |
-| `https://medium.com/<author>/<article>`      |
+Here is a list of current supported hosts:
+| Hosts                            |
+|:-:                               |
+| `https://zhuanlan.zhihu.com`     |
+| `https://mp.weixin.qq.com`       |
+| `https://medium.com`             |
+| `https://blog.csdn.net`          |
 
 ## Next Steps
 Please refer to issues of this repo.
