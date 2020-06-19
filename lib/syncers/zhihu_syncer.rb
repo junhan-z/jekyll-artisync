@@ -13,7 +13,10 @@ class ZhihuSyncer < PerNodeSyncer
       img_node = node.css('img')[-1]
       if img_node
         node = img_node
-        node['src'] = node['data-actualsrc']
+        img_url = node['data-actualsrc']
+        img_url['/v2'] = '/80/v2'
+        img_url = img_url.gsub(/_[a-zA-Z]\.jpg/, '_720w.jpg') # _[a-z].jpg -> _720.jpg
+        node['src'] = img_url
       end
     end
 
