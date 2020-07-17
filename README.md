@@ -63,10 +63,11 @@ post_url: <your post url>
 Here is a list of current supported hosts:
 | Hosts                            |
 |:-:                               |
-| `https://zhuanlan.zhihu.com`     |
-| `https://mp.weixin.qq.com`       |
-| `https://medium.com`             |
 | `https://blog.csdn.net`          |
+| `https://www.jianshu.com`        |
+| `https://medium.com`             |
+| `https://mp.weixin.qq.com`       |
+| `https://zhuanlan.zhihu.com`     |
 
 ## Next Steps
 Please refer to issues of this repo.
