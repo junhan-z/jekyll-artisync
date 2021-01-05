@@ -1,4 +1,5 @@
 require 'syncers/syncer_factory'
+require 'jekyll'
 
 
 class ArticleSyncEmbed < Liquid::Tag
