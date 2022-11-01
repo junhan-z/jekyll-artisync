@@ -8,6 +8,13 @@ class ZhihuSyncer < PerNodeSyncer
   end
 
   def _handle_node(node)
+    if node.child and node.child["class"] == 'ztext-math'
+      # write this line to your generated html for mathjax support:
+      # <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      # for example, you can include it in your template file: _layouts/post.html
+      node.content = '$$' + node.content + '$$'
+    end
+
     case node.name
     when 'figure'
       img_node = node.css('img')[-1]
